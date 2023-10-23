@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form name="myForm">
+            <div class="formdesign">
+                <div class="formRow" id="fname">
+                    First Name: <input type="text" name="fname" placeholder="Enter your first name" required>
+                    <span class="formerror"></span>
+                </div>
+                <div class="formRow" id="lname">
+                    Last Name: <input type="text" name="lname" placeholder="Enter your last name">
+                    <span class="formerror"></span>
+                </div>
+            </div>
+
+            <div class="formdesign">
+                <div class="formRow" id="phone">
+                    Phone No.: <input type="tel" name="phone" placeholder="Enter your Phone No." required>
+                    <span class="formerror"></span>
+                </div>
+                <div class="formRow" id="email">
+                    Email Add.: <input type="email" name="email" placeholder="Enter your Email Address" required>
+                    <span class="formerror"> </span>
+                </div>
+            </div>
+
+            <div class="formdesign">
+                <div class="formRow" id="profession">
+                    Profession: <input type="text" name="profession" placeholder="Enter your Profession" required>
+                    <span class="formerror"> </span>
+                </div>
+                <div class="formRow" id="dob">
+                    Date of Birth: <input type="date" name="dob" required>
+                    <span class="formerror"> </span>
+                </div>
+            </div>
+
+            <div class="formdesign">
+                <div class="formRow country" id="country">
+                    Country:
+                    <select name="country" id="selectoption" required>
+                        <option value=""></option>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="formerror"></span>
+                </div>
+                <div class="formRow gender" id="gender" required>
+                    Gender:
+                    <input type="checkbox" id="genders" name="check" onclick="onlyOne(this)" value="male"><label>Male</label>
+                    <input type="checkbox" id="genders" name="check" onclick="onlyOne(this)" value="female"><label>Female</label> 
+                    <input type="checkbox" id="genders" name="check" onclick="onlyOne(this)" value="other"><label>Other</label> 
+                    <span class="formerror"></span>  
+                </div>
+            </div>
+
+            <input class="but" type="submit" onclick="validateForm()" value="Submit">
+            <input class="but" type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+<script src="form.js"></script>
+
+</html>
